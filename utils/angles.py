@@ -1,9 +1,10 @@
 import numpy as np
 import mediapipe as mp
-mp_pose_lm = mp.solutions.pose
+#mp_pose_lm = mp.solutions.pose
 
 ANGLE_KEYS = [
-    '0.11-12.23-24',  # Nose to torso
+    '0.11/12.23/24', '0.11.23', '0.12.24', # Nose to torso
+    '11.23.-23', '12.24.-24', '11/12.23/24.-23/24',  # Torso to horizontal
     '12.11.13', '23.11.13', '23.11.12',  # Left shoulder ()
     '11.12.14', '24.12.14', '24.12.11',  # right shoulder # left elbow
     '11.13.15', '12.14.16',  # both elbows
@@ -14,26 +15,29 @@ ANGLE_KEYS = [
 ]
 
 
-def calc_angle_from_2d_coords(a, b, c):
+def calc_angle_from_2d_coords(a, b, c, full_circle=True):
+    """:param
+
+    """
     a = np.array(a)  # First
     b = np.array(b)  # Mid
     c = np.array(c)  # End
 
     radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
     angle = np.abs(radians * 180.0 / np.pi)
-
-    if angle > 180.0:
-        angle = 360 - angle
+    if not full_circle:
+        if angle > 180.0:
+            angle = 360 - angle
 
     return angle
 
 
 def transform_landmarks(landmarks) -> dict:
-    '''
+    """
         landmarks come from the mediapipeline processing from an image and should look something like follows:
             results = MP_POSE.process(image)
             landmarks = results.pose_landmarks.landmark
-    '''
+    """
 
     landmark_dict = {}
     mp_pose_lm = mp.solutions.pose.PoseLandmark
@@ -47,7 +51,7 @@ def transform_landmarks(landmarks) -> dict:
     landmark_dict['12'] = [landmarks[mp_pose_lm.RIGHT_SHOULDER.value].x,
                            landmarks[mp_pose_lm.RIGHT_SHOULDER.value].y]
     # Sternum
-    landmark_dict['11-12'] = (np.array(landmark_dict['11']) + np.array(landmark_dict['12'])) / 2
+    landmark_dict['11/12'] = (np.array(landmark_dict['11']) + np.array(landmark_dict['12'])) / 2
     # Elbows
     landmark_dict['13'] = [landmarks[mp_pose_lm.LEFT_ELBOW.value].x,
                            landmarks[mp_pose_lm.LEFT_ELBOW.value].y]
@@ -64,7 +68,7 @@ def transform_landmarks(landmarks) -> dict:
     landmark_dict['24'] = [landmarks[mp_pose_lm.RIGHT_HIP.value].x,
                            landmarks[mp_pose_lm.RIGHT_HIP.value].y]
     # Pubic Bone
-    landmark_dict['23-24'] = (np.array(landmark_dict['23']) + np.array(landmark_dict['24'])) / 2
+    landmark_dict['23/24'] = (np.array(landmark_dict['23']) + np.array(landmark_dict['24'])) / 2
 
     # Knees
     landmark_dict['25'] = [landmarks[mp_pose_lm.LEFT_KNEE.value].x,
@@ -76,14 +80,36 @@ def transform_landmarks(landmarks) -> dict:
                            landmarks[mp_pose_lm.LEFT_ANKLE.value].y]
     landmark_dict['28'] = [landmarks[mp_pose_lm.RIGHT_ANKLE.value].x,
                            landmarks[mp_pose_lm.RIGHT_ANKLE.value].y]
+    # Horizontals points from the hip
+    landmark_dict['-23'] = [landmarks[mp_pose_lm.LEFT_HIP.value].x + 1,
+                            landmarks[mp_pose_lm.LEFT_HIP.value].y]
+    landmark_dict['-24'] = [landmarks[mp_pose_lm.RIGHT_HIP.value].x + 1,
+                            landmarks[mp_pose_lm.RIGHT_HIP.value].y]
+    landmark_dict['-23/24'] = (np.array(landmark_dict['-23']) + np.array(landmark_dict['-24'])) / 2
     return landmark_dict
 
-def calc_angles_from_landmarks(landmarks: dict) -> dict:
+def calc_angles_from_landmarks(results, dictionary=False, full_circle=True) -> dict:
+    """
+                results = MP_POSE.process(image)
+                landmarks = results.pose_landmarks.landmark
+        """
+    try:
+        landmarks = results.pose_landmarks.landmark
+    except:
+        import time
+        time.sleep(20)
     landmark_dict = transform_landmarks(landmarks)
-    angles = {}
+    if dictionary:
+        angles = {}
+    else:
+        angles = []
 
     for key in ANGLE_KEYS:
         a, b, c = (landmark_dict[number] for number in key.split('.'))
-        angles[key] = calc_angle_from_2d_coords(a, b, c)
+        angle = calc_angle_from_2d_coords(a, b, c, full_circle=full_circle)
+        if dictionary:
+            angles[key] = angle
+        else:
+            angles.append(angle)
 
     return angles

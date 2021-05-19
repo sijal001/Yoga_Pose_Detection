@@ -33,7 +33,7 @@
                         <div class="card shadow-lg border border-3 p-3 mb-5 bg-body rounded rounded-5 " style="background-image: linear-gradient(to bottom left, rgb(180, 84, 143), rgb(53, 217, 190))" >
                             <div class="card-header"><h1 align="center" > General Information </h1></div>
                             <div class="card-body">
-                                <form class="row g-3" action="{{ url_for('dash_board')}}" method="POST">
+                                <form class="row g-3" action="{{ url_for('dash_board')}}" method="POST" enctype = "multipart/form-data">
                                     <span >
                                     
                                     <br>
@@ -64,7 +64,8 @@
                                             <input type="text" class="form-control" id="validationDefault02" name="height" required>
                                         </div>
                                     </div>
-                    
+                                    
+                                    <br/>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="feed_type" value="live_feed" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
@@ -77,10 +78,16 @@
                                             Video File
                                         </label>
                                     </div>
+                                    
+                                    <br/>
+                                    <div class="form-group">
+                                        
+                                        <input type="file" name="file_upload" class="form-control-file">
+                                    </div>
                                     <br>
                                 
                                     <div class="d-grid gap-2 col-3 mx-auto">
-                                        <button  class="btn btn-primary btn-outline-warning text-light" type="submit"><strong>Submit</strong></button>
+                                        <button  class="btn btn-primary btn-outline-info text-light" type="submit"><strong>Submit</strong></button>
                                     </div>
                                     <br>
         

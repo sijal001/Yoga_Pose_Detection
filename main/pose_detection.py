@@ -20,8 +20,9 @@ def pose_detection(video_path=0,train=True, class_name="training_classifier_name
     cap = cv2.VideoCapture(video_path)
     # Initiate holistic model
     with mp_holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
-            
+        c = 0
         while cap.isOpened():
+            
             ret, frame = cap.read()
             
             if ret == True:
@@ -82,8 +83,8 @@ def pose_detection(video_path=0,train=True, class_name="training_classifier_name
                         body_language_class = model.predict(X)[0]
                         body_language_prob = model.predict_proba(X)[0]
                         #print(body_language_class, body_language_prob)
-                        pose_name_fps.append(body_language_class.split(' ')[0])
-                        pose_prob_fps.append(str(round(body_language_prob[np.argmax(body_language_prob)],2)))
+                        pose_name_fps.append(body_language_class)
+                        pose_prob_fps.append(body_language_prob)
 
                         # Grab ear coords
                         coords = tuple(np.multiply(
@@ -123,7 +124,8 @@ def pose_detection(video_path=0,train=True, class_name="training_classifier_name
                     break
             else:
                 break
-    
+
+    pose_prob_fps = np.array(pose_prob_fps)
     cap.release()
     cv2.destroyAllWindows()
-    return (pose_name_fps, pose_prob_fps)
+    return (pose_name_fps, pose_prob_fps, model.classes_)

@@ -1,7 +1,7 @@
 <h1 align="center"> <strong>Yoga Pose Detection</strong> </h1>
 
 
-<img src="https://images.pexels.com/photos/6787408/pexels-photo-6787408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Italian Trulli" width="1000" height="700" style="display: block;
+<img src="https://images.pexels.com/photos/6787408/pexels-photo-6787408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Italian Trulli" width="1000" height="550" style="display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;">

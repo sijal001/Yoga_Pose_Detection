@@ -104,6 +104,8 @@ def dash_board():
             train=False)
             stop = timeit.default_timer()
 
+            total_reps = 0
+            
             total_time = stop - start
             total_time = round(total_time/60,1)
         

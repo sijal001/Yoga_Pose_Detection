@@ -17,7 +17,6 @@ from main import pose_detection
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = r'./upload/'
 
-
 def moving_average(a, n=40):
     """
     Computes the moving average of our probabilities over 'n' rows.
@@ -63,9 +62,6 @@ def count_time(poses, detected_poses, fps=24, threshold=0.25):
         count[frame['pose']] = np.round(count[frame['pose']])
     print(total)
     return count
-
-
-
 
 @app.route('/', methods=['GET', 'POST'])
 def dash_board():

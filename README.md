@@ -140,7 +140,7 @@ Yoga_Pose_Detection
 ---
 ## **License**
 
-Copyright (c) [2021] [Sijal Kumar Joshi]
+Copyright (c) [2021] [Sijal Kumar Joshi, Simon Snyders, Vincent Rolin]
 
 <p align="justify">
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -170,7 +170,7 @@ SOFTWARE.
 
 ## **Author Info**
 
-- Linkedin - [Sijal Kumar Joshi](https://www.linkedin.com/in/sijal-kumar-joshi-b1545584/)
-- Github   - [sijal001](https://github.com/sijal001)
+- Linkedin - [Sijal Kumar Joshi](https://www.linkedin.com/in/sijal-kumar-joshi-b1545584/), [Simon Snyders](https://www.linkedin.com/in/simon-snyders-9452aa146/), [Vincent Rolin](https://www.linkedin.com/in/vincent-rolin-/)
+- Github   - [sijal001](https://github.com/sijal001), [Simon Snyders](https://github.com/simonsny), [Vincent Rolin](https://github.com/RolyVy)
 
 [**↥ Back To The Top**](#table-of-contents)

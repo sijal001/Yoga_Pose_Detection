@@ -73,10 +73,10 @@ We came up with many conclusions, as we also tired to attemt many different mode
 `pip install -r requiement.txt`
 
 
-1. After the required libary install basic application can be run by just running `appy.py` python script.
+1. After the required libary install basic application can be run by just running `app.py` python script.
 
 2. **(optional: <u>seprate training set</u>)** Download import file and move it to `\yoga_gesture_detection\pose_recognition_data\training data\training frames\videos`
-3. **(optional: <u>generate different model</u>)** Inside `_Project_analusis` directory run `body_pose_detection.ipynb`
+3. **(optional: <u>generate different model</u>)** Inside `_Project_Analysis` directory run `body_pose_detection.ipynb`
 	* Frame to video
 	* Train model seprately
 	* genereate different models for personal testing

@@ -34,7 +34,7 @@ The MVP is where the customers receive a report of the yoga poses, which ones we
 
 <p align="justify">
 We are using the MediaPipe one of the cutting edge tech to detect the body position and as for classification its RandomForest, an Machine Learning model which help produce a great result.
-We came up with many conclusions, as we also tired to attemt many different models to completed the project. Inluding CNN model, and Neural Network model which is stated to be very advance and perfered Neural Network AI model for most of the digital visual analysis.
+We came up with many conclusions, as we also tired to attemt many different models to completed the project. Inluding CNN model, and Neural Network model which is stated to be very advance and prefered Neural Network AI model for most of the digital visual analysis.
 </p>
 
 <br/>

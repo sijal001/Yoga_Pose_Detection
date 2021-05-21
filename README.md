@@ -91,33 +91,37 @@ We came up with many conclusions, as we also tired to attemt many different mode
 ```
 Yoga_Pose_Detection
 │
-│   README.md               :explains the project
-│   requirements.txt        :packages to install to run the program
-│   .gitignore              :specifies which files to ignore when pushing to the repository
+│   README.md               :Explains the project.
+│   requirements.txt        :Packages to install to run the program.
+│   .gitignore              :Specifies which files to ignore when pushing to the repository.
 │__   
-│   _Project_Analysis       :directory contain all analysis done while doing this project.
+│   _Project_Analysis       :Directory contain all analysis done while doing this project.
 │   │
-│   │ body_pose_detection.ipynb            :frame-to-video geting coordinates. Classifing Body pose
-│   │ Neural_Network_model_training:ipynb  :research and analaysis performed for Neural Networking
-│   │ Classification.ipynb  :analysing the best ML model to go with for classification
+│   │ body_pose_detection.ipynb            :Frame-to-video geting coordinates. Classifing Body pose.
+│   │ Neural_Network_model_training:ipynb  :Research and analaysis performed for Neural Networking.
+│   │ Classification.ipynb  :Analysing the best ML model to go with for classification.
 │   │ counting.py           :Performing the repitaiton and time counts.
 │__   
-│   data          	    :directory the main video/image fetures files.
+│   data          	    :Directory the main video/image fetures files.
 │   │
-│   │ coords.csv	    :csv file containg every classification coordinates in image/videos.
+│   │ coords.csv	    :Csv file containg every classification coordinates in image/videos.
 │__   
-│   main       		    :directory the main video/image fetures files.
+│   main       		    :Directory the main video/image fetures files.
 │   │
-│   │ pose_detection.py     :main script file to detect the pose and classify it accordingly.
+│   │ pose_detection.py     :Main script file to detect the pose and classify it accordingly.
 │__   
-│   saved_model    	    :directory the saved training model of the classification.
+│   saved_model    	    :Directory the saved training model of the classification.
 │   │
-│   │ body_language.pkl     :pickel/saved file of the trained model.
+│   │ body_language.pkl     :Pickel/saved file of the trained model.
 │__   
-│   templates               :directory contain all the main html that work as a dashboard.
+│   templates               :Directory contain all the main html that work as a dashboard.
 │   │
-│   │ Dashboard.html        :dashboard for user to view the results.
-│   │ index.html            :home page for website, provide the general informations.
+│   │ Dashboard.html        :Dashboard for user to view the results.
+│   │ index.html            :Home page for website, provide the general informations.
+│__   
+│   upload                  :Directory contains all the video file up^loaded by the user for analysis.
+│
+│   app.py                  :Python script file to deploy model and html files for web application.
 │__   
 │   upload                  :directory contains all the video file up^loaded by the user for analysis.
 │

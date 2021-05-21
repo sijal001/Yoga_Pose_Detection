@@ -104,7 +104,7 @@ Yoga_Pose_Detection
 │__   
 │   data          	    :Directory the main video/image fetures files.
 │   │
-│   │ coords.csv	    :Csv file containg every classification coordinates in image/videos.
+│   │ coords.csv	    :csv File containg every classification coordinates in image/videos.
 │__   
 │   main       		    :Directory the main video/image fetures files.
 │   │
@@ -123,9 +123,9 @@ Yoga_Pose_Detection
 │
 │   app.py                  :Python script file to deploy model and html files for web application.
 │__   
-│   upload                  :directory contains all the video file up^loaded by the user for analysis.
+│   upload                  :Directory contains all the video file up^loaded by the user for analysis.
 │
-│   app.py                  :python script file to deploy model and html files for web application.
+│   app.py                  :Python script file to deploy model and html files for web application.
 ```
 
 [**↥ Back To The Top**](#table-of-contents)

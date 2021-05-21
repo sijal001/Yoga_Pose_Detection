@@ -15,7 +15,7 @@ You're sections headers will be used to reference location of destination.
 
 - [Description](#description)
 - [How To Use](#how-to-use)
-- [Repo Artitecture](#repo-artitecture)
+- [Repo Architecture](#repo-artitecture)
 - [Next Step](#next-step)
 - [License](#license)
 - [Author Info](#author-info)
@@ -87,7 +87,7 @@ We came up with many conclusions, as we also tired to attemt many different mode
 
 ---
 
-## **Repo Artitecture**
+## **Repo Architecture**
 ```
 Yoga_Pose_Detection
 │

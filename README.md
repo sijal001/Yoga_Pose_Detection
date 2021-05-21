@@ -97,19 +97,20 @@ Yoga_Pose_Detection
 │__   
 │   _Project_Analysis       :directory contain all analysis done while doing this project.
 │   │
-│   │ body_pose_detection.ipynb     :frame-to-video geting coordinates. Classifing Body pose
+│   │ body_pose_detection.ipynb            :frame-to-video geting coordinates. Classifing Body pose
+│   │ Neural_Network_model_training:ipynb  :research and analaysis performed for Neural Networking
 │   │ Classification.ipynb  :analysing the best ML model to go with for classification
 │   │ counting.py           :Performing the repitaiton and time counts.
 │__   
-│   data          		    :directory the main video/image fetures files.
+│   data          	    :directory the main video/image fetures files.
 │   │
-│   │ coords.csv	        :csv file containg every classification coordinates in image/videos.
+│   │ coords.csv	    :csv file containg every classification coordinates in image/videos.
 │__   
-│   main          		    :directory the main video/image fetures files.
+│   main       		    :directory the main video/image fetures files.
 │   │
 │   │ pose_detection.py     :main script file to detect the pose and classify it accordingly.
 │__   
-│   saved_model    		    :directory the saved training model of the classification.
+│   saved_model    	    :directory the saved training model of the classification.
 │   │
 │   │ body_language.pkl     :pickel/saved file of the trained model.
 │__   
@@ -118,9 +119,9 @@ Yoga_Pose_Detection
 │   │ Dashboard.html        :dashboard for user to view the results.
 │   │ index.html            :home page for website, provide the general informations.
 │__   
-│   upload          		:directory contains all the video file up^loaded by the user for analysis.
-|
-│	 app.py                 :python script file to deploy model and html files for web application.
+│   upload                  :directory contains all the video file up^loaded by the user for analysis.
+│
+│   app.py                  :python script file to deploy model and html files for web application.
 ```
 
 [**↥ Back To The Top**](#table-of-contents)
@@ -129,10 +130,10 @@ Yoga_Pose_Detection
 
 ## **Next Step**
 
-- Web Dashboard for CV recent analysis.
-- Improve Overall alaysis DAshboard.
+- Seprate Web Dashboard for application performing the analysis, also inuding realtime update.
+- Improve Overall alaysis Dashboard.
 - Use of Neural Network.
-- Improve Accuracy, Object detection.
+- Improve Accuracy with Object detection.
 - Improvement of angle detection.
 
 [**↥ Back To The Top**](#table-of-contents)
@@ -168,7 +169,7 @@ SOFTWARE.
 
 ---
 
-## **Author Info**
+## **Authors Info**
 
 - Linkedin - [Sijal Kumar Joshi](https://www.linkedin.com/in/sijal-kumar-joshi-b1545584/), [Simon Snyders](https://www.linkedin.com/in/simon-snyders-9452aa146/), [Vincent Rolin](https://www.linkedin.com/in/vincent-rolin-/)
 - Github   - [Sijal Kumar Joshi](https://github.com/sijal001), [Simon Snyders](https://github.com/simonsny), [Vincent Rolin](https://github.com/RolyVy)

@@ -25,7 +25,7 @@ Your sections headers will be used to reference the location of destination.
 ## **Description**
 
 <p align="justify">
-Online Yoga coaching jobs are becoming challenging for the coaches because it's hard for them to keep track of the progress of each one of the participants. They would like to evaluate if the people are doing correctly the poses and provide custom-made training plans but it's hard to do when hundreds are joining the same class.
+Online Yoga coaching jobs are becoming challenging for the coaches because it's hard for them to keep track of the progress of each one of the participants. They would like to evaluate if the students are doing the poses correctly and provide custom-made training plans but it's hard to do when hundreds are joining the same class.
 </p>
 <p align="justify">
 Project Goal is to to build an application able to track the poses done by the yoga practitioner, measure time, repetitions and evaluate if the poses are done correctly.
@@ -33,7 +33,7 @@ The MVP is where the customers receive a report of the yoga poses, which ones we
 </p>
 
 <p align="justify">
-We are using the MediaPipe, one of the cutting edge tech to detect the body position and as for classification its RandomForest, an Machine Learning model which helps produce a great result.
+We are using the MediaPipe, one of the cutting edge tech to detect the body position and as for classification we used RandomForest, a Machine Learning model which helps produce a great result.
 We came up with many conclusions, as we also tried to attempt many different models to complete the project. Including CNN model, and Neural Network model which is stated to be very advanced and preferred Neural Network AI model for most of the digital visual analysis.
 </p>
 
@@ -46,8 +46,8 @@ We came up with many conclusions, as we also tried to attempt many different mod
 | ------------- | :----------------------------------------------|
 | Flask         | to scale up to complex applications.           |
 | gunicorn      | a Python WSGI HTTP Server for UNIX.            |
-| itsdangerous  | to ensure that a token has not been tampered.  |
-| Jinja2        | a combination of Django templates and python.  |
+| itsdangerous  | to ensure that a token has not been tampered   |
+| Jinja2        | a combination of Django templates and python   |
 | MarkupSafe    | to mitigates injection attacks                 |
 | Werkzeug      | to build all sorts of end user applications    |
 | numpy         | to scientific uses                             |
